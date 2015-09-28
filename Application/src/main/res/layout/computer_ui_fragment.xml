@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center">
+        <tv.piratemedia.flightcontroller.VerticalProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="200dp"
+            style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+            android:max="140"
+            android:id="@+id/throttle"/>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:id="@+id/LedColor"
+                android:background="#000000"
+                android:focusableInTouchMode="false"
+                android:layout_marginBottom="10dp" />
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center">
+
+                <ProgressBar
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:max="20"
+                    android:id="@+id/rollLeft"
+                    android:rotation="180"/>
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <tv.piratemedia.flightcontroller.VerticalProgressBar
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                        android:max="20"
+                        android:id="@+id/pitchForward"
+                        android:layout_marginBottom="10dp"/>
+                    <tv.piratemedia.flightcontroller.VerticalProgressBar
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                        android:max="20"
+                        android:id="@+id/pitchBackward"
+                        android:rotation="180"/>
+                </LinearLayout>
+                <ProgressBar
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:max="20"
+                    android:id="@+id/rollRight" />
+            </LinearLayout>
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center">
+                <ProgressBar
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:max="20"
+                    android:id="@+id/yawLeft"
+                    android:rotation="180"/>
+                <ProgressBar
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:max="20"
+                    android:id="@+id/yawRight"/>
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/list"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:transcriptMode="alwaysScroll" >
+        <!-- Preview: listitem=@android:layout/simple_list_item_1 -->
+    </ListView>
+
+</LinearLayout>
